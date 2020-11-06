@@ -1,0 +1,10 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "title": "smokis gaseirneba",
+      "description": "10-ze unda gavaseirno",
+      "completed": false
+    }
+  ]
+}

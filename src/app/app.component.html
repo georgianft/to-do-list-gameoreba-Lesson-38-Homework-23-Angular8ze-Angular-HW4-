@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="to-do-list" id="cat-list">
+        <!-- <app-to-do [todo]="todos[0]" (delete_ToDo) = "deleteTOdoFunc($event)"></app-to-do>
+        <app-to-do [todo]="todos[1]" (delete_ToDo) = "deleteTOdoFunc($event)"></app-to-do>
+        <app-to-do [todo]="todos[2]" (delete_ToDo) = "deleteTOdoFunc($event)"></app-to-do> -->
+        
+        <!-- wina versia -->
+        <!-- <input type="text" placeholder="todo title" [(ngModel)]="newTodoTitle">
+        <input type="text" placeholder="todo description" [(ngModel)]="newTodoDescription">
+        <button (click)="addTodo()">add Todo</button>
+        <app-to-do *ngFor="let todoFromArray of todos" [todo]="todoFromArray" (deleted)="onTodoDeleted($event)"></app-to-do> -->
+        
+        <!-- gadaketebuli(davaleba angular8 HW4) -->
+        <form (ngSubmit)="submitUserForm2(userForm2)" #userForm2="ngForm" style="margin: 50px 50px;">
+            <input type="text" placeholder="todo title" name="nametitle" ngModel #nametitle="ngModel" required>
+            <input type="text" placeholder="todo description" name="namedescription" ngModel #namedescription="ngModel" required>
+            <button type="submit" (click)="addTodo(userForm2)">add Todo</button>
+            <app-to-do *ngFor="let todoFromArray of todos" [todo]="todoFromArray" (deleted)="onTodoDeleted($event)"></app-to-do>
+        </form>
+
+        <!-- <div *ngFor="let number of numbersArr">
+            <span>{{number}}</span>
+            <span *ngIf="number">{{number}}</span>
+        </div> -->
+        <!-- <button (click)="showEven = true; showAll = false;">Shoow Even</button>
+        <button (click)="showEven = false; showAll = false;">Shoow odd</button>
+        <button (click)="showAll = true">Shoow All</button>
+        <button (click)="showAll =true">Shoow all</button>
+        <app-to-do *ngFor="let to of todos"></app-to-do>
+        <app-custom-input [disabledProp]= "disabled"></app-custom-input>
+        <button (click)="disabled = !disabled">toogle disabled</button> -->
+    </div>
+    
+</div>
+<!-- <p>Parent counter {{counter}}</p>
+<button (click)="counter = counter + 1">Parent button</button>
+<app-counter [counterStartValue]="counter" (counterChanged)="counter = counter + 1" (counterEntered)="onCounterEntered($event)" ></app-counter> -->
+
+<!-- <div *ngIf="showMessage">HELLO WORLD</div>
+<div [hidden]="!showMessage">HELLO WORLD</div>
+<button (click)="showMessage = !showMessage">Change ShowMessage</button> -->
+<!-- <app-ng-model-test></app-ng-model-test> -->
+<app-template-variable-test></app-template-variable-test>
+<app-user-form-test></app-user-form-test>

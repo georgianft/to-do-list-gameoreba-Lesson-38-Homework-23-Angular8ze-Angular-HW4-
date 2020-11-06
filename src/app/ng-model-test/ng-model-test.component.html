@@ -1,0 +1,8 @@
+<input type="text" placeholder="first name" [(ngModel)]="firstName">
+<input type="text" placeholder="last name" [(ngModel)]="lastName">
+<p>select your favorite pet</p>
+<select [(ngModel)]="favoritePet">
+    <option value="1">dog</option> 
+    <option value="2">cat</option>
+</select>
+<button (click)="submit()">Submit</button>
